@@ -97,7 +97,7 @@ def pregunta_04():
 
     # Importe GridSearchCV
     from sklearn.model_selection import GridSearchCV
-    from sklearn.metrics import r2
+    from sklearn.metrics import r2_score
     
     # Cree una malla de búsqueda para el objecto GridSearchCV
     # con los siguientes parámetros de búesqueda:
@@ -129,7 +129,7 @@ def pregunta_04():
         estimator=estimator,
         param_grid=param_grid,
         cv = 5, 
-        scoring = r2  
+        scoring = r2_score  
     )
 
     return gridsearchcv
